@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>Grid Template Areas</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item header">
+      <p>I'm Header</p>
+    </div>
+    <div class="item content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+      <p>Lorem ipsum d</p>
+    </div>
+    <div class="item sidebar">
+      <p>I'm Sidebar #1</p>
+    </div>
+    <div class="item footer">
+      <p>I'm the footer</p>
+    </div>
+  </div>
+
+  <!-- 
+
+    ** By now we are starting to get the hang of
+    ** spanning, grid-template-columns och rows,
+    ** so it's time to take it to the next level.
+    
+    ** grid-template-areas!
+    
+    ** With grid-template-areas it is like we are
+    ** creating an ASCII-map of the layout.
+    ** How you normally define it is you type 
+    ** grid-template-areas: and then hit enter
+    ** for a line break and then define the layout.
+    ** Like this
+
+    grid-template-areas:
+      "header   header    header"
+      "sidebar  content   content"
+      "footer   footer    footer";
+
+    ** Now guess how this is going to look and then
+    ** open up the browser.
+
+    ** Did it look like you expected? Now in each of
+    ** the empty classes below, add grid-area: with
+    ** the same value as the class name to it.
+    ** (Ex. grid-area: content).
+
+    ** Now give each row different heights using
+    ** grid-template-rows.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas:
+        "header   header    header"
+        "sidebar  content   content"
+        "footer   footer    footer";
+    }
+    
+    .header {
+
+    }
+
+    .sidebar {
+
+    }
+
+    .content {
+
+    }
+
+    .footer {
+
+    }
+  </style>
+</body>
+
+</html

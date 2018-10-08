@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid Carousel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+    <button class="btn btn--prev">
+      <span>
+        <
+      </span>
+    </button>
+    <div class="grid-item grid-item1">
+      <img src="images/croc.jpg" alt="Croc">
+    </div>
+    <div class="grid-item grid-item2">
+      <img src="images/elephant.jpg" alt="Elephant">
+    </div>
+    <div class="grid-item grid-item3">
+      <img src="images/hippo.jpg" alt="Hippo">
+    </div>
+    <div class="grid-item grid-item4">
+      <img src="images/pug.jpg" alt="Pug">
+    </div>
+    <div class="grid-item grid-item5">
+      <img src="images/tiger.jpg" alt="Tiger">
+    </div>
+    <div class="grid-item grid-item6">
+      <img src="images/zebra.jpg" alt="Zebra">
+    </div>
+    <button class="btn btn--next">
+      <span>
+        >
+      </span>
+    </button>
+  </div>
+
+  <!-- Build a carousel using CSS Grid -->
+
+  <style>
+    body,
+    html,
+    .container {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-columns: 100%;
+      grid-auto-flow: column;
+      overflow-x: hidden;
+    }
+
+    .grid-item {
+      display: flex;
+      transition: transform 700ms ease;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.6);
+      background: none;
+      padding: 10px 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      z-index: 10;
+    }
+
+    .btn:hover {
+      background: rgba(128, 128, 128, 0.8);
+      color: rgba(255, 255, 255, 1);;
+    }
+
+    .btn:active {
+      background: rgba(128, 128, 128, 1);
+    }
+
+    .btn--prev {
+      left: 40px;
+    }
+
+    .btn--next {
+      right: 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+
+  <script>
+    const nextArrow = document.querySelector( '.btn--next' )
+    const prevArrow = document.querySelector( '.btn--prev' )
+    const gridItem = document.querySelectorAll( '.grid-item' )
+    let idx = 0
+
+    nextArrow.addEventListener('click', () => {
+      if ( idx < 5 ) {
+        idx = idx + 1
+        gridItem.forEach( item => item.style.transform = `translateX(-${idx}00%)`)
+      } else {
+        idx = 0
+        gridItem.forEach( item => item.style.transform = `translateX(0)`)
+      }
+    })
+
+    prevArrow.addEventListener('click', () => {
+      if ( idx === 0 ) {
+        idx = 5
+        gridItem.forEach( item => item.style.transform = `translateX(-500%)`)
+      } else {
+        idx = idx - 1
+        gridItem.forEach( item => item.style.transform = `translateX(-${idx}00%)`)
+      }
+    })
+
+  </script>
+</body>
+</html>

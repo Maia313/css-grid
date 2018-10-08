@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>CSS grid-auto-flow Explained!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+
+    <!-- 
+
+    ** When you open this one up in your browser, you'll notice
+    ** that the elements keep going of way of the page creating 
+    ** a horizontal scrollbar. That's because we define special
+    ** rules for the first and second column, most likely because 
+    ** we don't know how many elements it is going be since they 
+    ** might be generated dynamically. 
+    
+    ** That's where auto-flow comes into play. With auto-flow you 
+    ** define in what direction all "extra" elements should line up.
+    ** By default grid-auto-flow is row, which makes the elements 
+    ** align beneath each other. Try commenting out grid-auto-flow
+    ** and see what happens. 
+
+    ** The grid-auto-columns and grid-auto-rows is where you define
+    ** the width or height of the rows and columns that are not defined
+    ** from the begining. As with grid-template-columns and grid-template-rows
+    ** you can define more than one rule. For instance is you set
+    ** grid-auto-colums: 150px 300px 50px; In our case, the third
+    ** column would receive the width of 150px, the fourth 300px
+    ** and the fifth 50px. What about the sixth? Well the rules 
+    ** just start over giving the sixth the width of 150px, the
+    ** seventh 300px an so on.
+
+    ** So with this exercise, play around with grid-auto-columns
+    ** and grid-auto-rows, add more elements and see how they line up.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 300px 150px;
+      grid-auto-flow: column;
+      grid-auto-columns: 500px;
+    }
+  </style>
+</body>
+
+</html>

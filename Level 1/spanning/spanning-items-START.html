@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>Sizing Grid Items!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+    <div class="item item19">19</div>
+    <div class="item item20">20</div>
+    <div class="item item21">21</div>
+    <div class="item item22">22</div>
+    <div class="item item23">23</div>
+    <div class="item item24">24</div>
+    <div class="item item25">25</div>
+    <div class="item item26">26</div>
+    <div class="item item27">27</div>
+    <div class="item item28">28</div>
+    <div class="item item29">29</div>
+    <div class="item item30">30</div>
+  </div>
+
+  <!-- 
+
+    ** This exercise is an introduction into "spanning".
+    ** We know by now that we define the the size with
+    ** grid-template-columns and grid-template-rows. And
+    ** by default the elements just fall into each column
+    ** as they appear in the DOM tree. 
+    
+    ** But what if we want on or more elements to take up 
+    ** more space than just one column? Thats where 
+    ** grid-column, grid-row and spanning comes into play.
+    
+    ** If we chose an item from above, say item6 and define
+    ** grid-column: span 3; From where item7 falls into the 
+    ** grid, it will then span 3 columns. But what if there 
+    ** is only 2 columns left before row-break? Try it out!
+
+    ** And give several different items different spans,
+    ** both columns and rows.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      width: 90%;
+      grid-gap: 20px;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(4, 100px);
+    }
+
+    .item7 {
+      grid-column: span 3;
+    }
+  </style>
+</body>
+
+</html>

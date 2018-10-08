@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid Image Gallery!</title>
+</head>
+
+<body>
+
+  <div class="overlay">
+    <div class="overlay-inner">
+      <button class="close">× Close</button>
+      <img>
+    </div>
+  </div>
+
+  <section class="gallery">
+  </section>
+
+    <!-- 
+
+    ** This is a tough challenge! Go ahead and open the finished version
+    ** in the browser to have as reference. You are going to create an 
+    ** image gallery with an overlay that will show once hovered. The
+    ** overlay will have a button that once clicked shows the image in
+    ** a modal. 
+
+    ** A few hints, don't forget to use the rule that auto fills spots
+    ** in the grid that are empty!
+
+    ** You are also going to be doing some JavaScript in this challenge.
+
+    ** If you want an even tougher challenge, delete all the JavaScript
+    ** that is commented out!
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 50px;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #F93D66, #6D47D9);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0 0 5px 0;
+    }
+
+    p {
+      margin: 0 0 20px 0;
+    }
+
+    .close {
+      background: none;
+      color: white;
+      border: 0;
+    }
+
+    .gallery {}
+
+
+
+    .overlay {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.7);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      z-index: 2;
+    }
+
+    .overlay.open {
+      display: grid;
+    }
+
+    .overlay figure {
+      background: white;
+      width: 700px;
+      padding: 20px;
+    }
+
+    .overlay img {
+      width: 100%;
+    }
+  </style>
+
+  <script>
+    const gallery = document.querySelector('.gallery');
+    const overlay = document.querySelector('.overlay');
+    const overlayImg = overlay.querySelector('img');
+    const overlayClose = overlay.querySelector('.close');
+
+    // function genHTML ([h, v]) {
+    //   return `
+    //     <div class="item h${h} v${v}">
+    //       <img src="images/${ranNum(12)}.jpg" />
+    //       <div class="item__overlay">
+    //         <button>View</button>
+    //       </div>
+    //     </div>`
+    // }
+
+    // function ranNum (lim) {
+    //   return Math.floor(Math.random() * lim) + 1;
+    // }
+
+    // const digits = Array.from({ length : 50}, () => [ranNum(4), ranNum(4)]).concat([[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1]]);
+
+    // const html = digits.map(genHTML).join('');
+
+    // gallery.innerHTML = html;
+
+  </script>
+</body>
+
+</html>

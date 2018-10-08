@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>CSS Grid Alignment + Centering!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+  </div>
+
+  <!-- 
+
+    ** In this exercise we are going to take a closer look
+    ** at aligning and centering items. If you got any 
+    ** experience with flexbox, then some of this is going 
+    ** to be familiar. In CSS Grid we got three different 
+    ** ways of aligning items. -items, -content and -self.
+    ** All these will have either justify or align infront 
+    ** of it. By default all of these are set to stretch.
+
+      Content
+    ** justify and align-content is used to place the grid
+    ** container. For this to have any effect, the grid 
+    ** container has to be smaller than the container surronding
+    ** it. 
+    
+      Items
+    ** justify and align-items define how each item should 
+    ** line up. By changing justify or align-items to for 
+    ** instance center, the items will be shrunk to only 
+    ** take up the space of its content, including padding
+    ** etc. Change it to justify-items: end; will place all
+    ** items at the end of its column and size it back out.
+
+      Self
+    ** justify and align-self is when you want to target an
+    ** item individually. You will be familiar with how 
+    ** align-self works if you got any flexbox experience.
+    ** justify-self works the same way but horizontally.
+
+    ** As a shourtcut, you can instead use place- ahead of 
+    ** all three rules. place- is going to render out in this
+    ** order, align-[rule] and justify-[rule]. So by setting
+    ** place-self: center end; is going to set the individual
+    ** item to align center vertically and at the end of the
+    ** column horizontally.
+    
+    ** If both align and justify will have the same rule, like:
+    ** place-items: center; will result in justify-items: center;
+    ** and align-items: center;
+
+    ** The most common values you are going to use is center,
+    ** end or flex-end, start or flex-start.
+
+    ** Now go ahead and play around with the different rules
+    ** to get to know them better.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    /*
+      justify-items:
+      align-items:
+
+      justify-content:
+      align-content:
+
+      align-self:
+      justify-self:
+
+      justify-* is row axis
+      align-* is column axis
+    */
+
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+      border: 10px solid var(--yellow);
+      height: 500px;
+    }
+
+    .item {
+      background: powderblue;
+    }
+  </style>
+</body>
+
+</html>

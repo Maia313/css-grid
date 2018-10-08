@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>Re-ordering Grid Items!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item sidebar">SIDEBAR</div>
+    <div class="item nav">NAV</div>
+    <div class="item content">
+      <p>CONTENT</p>
+    </div>
+  </div>
+
+  <!-- 
+
+    ** Same as with the alignment & centering exercise,
+    ** if you got any flexbox experience this too is 
+    ** going to be familiar. Ordering in flexbox is not
+    ** used that often but it is a good tool to know.
+    ** Every item in a grid has order set to 0 by 
+    ** default to make them all fall into the next the
+    ** column as they appear in the DOM tree. But by
+    ** setting order to another number you will change
+    ** its position in the grid container.
+
+    ** The challenge here is to arrange the layout to
+    ** look like this:
+       NAV is going to be on top
+       SIDEBAR is going to be to the left
+       CONTENT to the right
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 150px);
+    }
+
+    .sidebar {
+      grid-row: span 2;
+    }
+
+    .nav {
+      grid-column: 1 / -1;
+    }
+
+    .content {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+  </style>
+</body>
+
+</html>

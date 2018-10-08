@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>CSS Grid repeat Function!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+  </div>
+
+  <!-- 
+
+    ** In this exercise we are going to be working with the
+    ** repeat function. When you got serveral rows or columns
+    ** in a row that are going to have the same size. Instead
+    ** of typing grid-template-columns: 150px 150px 150px; to
+    ** get three columns to all be 150px wide, we type 
+    ** grid-template-columns: repeat(3, 150px);
+    
+    ** Now play around with the repeat function for both rows
+    ** and columns. And the repeat function can be used more 
+    ** than once in a declaration. For instance, 
+    ** grid-template-columns: repeat(2, 250px) auto 350px repeat(3, 1fr);
+    ** That would leave you with 2 columns 250px wide, one column
+    ** only taking up its contents width, the fourth column 
+    ** is 350px wide and the last three split the remaining
+    ** space between each other.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+    }
+  </style>
+</body>
+
+</html>

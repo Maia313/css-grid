@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>Sizing Tracks in CSS Grid!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+  </div>
+
+  <!-- 
+
+    ** In this exercise, we are going to learn the difference
+    ** between auto and the fr unit. Go ahead and begin with
+    ** setting grid-template-columns: auto 1fr; 
+
+    ** Now try changing the text of the first element from 1
+    ** to something a bit longer (For instance your name, Stockholm 
+    ** or A bit longer).
+
+    ** Now change the rules for grid-template-columns to 
+    ** grid-template-columns: auto 1fr auto 1fr;
+
+    ** So what we can see here is that auto only takes up as
+    ** much room as needed to fit the content where as the fr unit
+    ** will stretch and take up the remaining space. With that
+    ** said, go ahead and change one of the 1frs to 2fr and see
+    ** what happens.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: auto 1fr auto 2fr;
+    }
+  </style>
+</body>
+
+</html>

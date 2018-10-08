@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid Carousel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+    <button class="btn btn--prev">
+      <span>
+        <
+      </span>
+    </button>
+    <div class="grid-item grid-item1">
+      <img src="images/croc.jpg" alt="Croc">
+    </div>
+    <div class="grid-item grid-item2">
+      <img src="images/elephant.jpg" alt="Elephant">
+    </div>
+    <div class="grid-item grid-item3">
+      <img src="images/hippo.jpg" alt="Hippo">
+    </div>
+    <div class="grid-item grid-item4">
+      <img src="images/pug.jpg" alt="Pug">
+    </div>
+    <div class="grid-item grid-item5">
+      <img src="images/tiger.jpg" alt="Tiger">
+    </div>
+    <div class="grid-item grid-item6">
+      <img src="images/zebra.jpg" alt="Zebra">
+    </div>
+    <button class="btn btn--next">
+      <span>
+        >
+      </span>
+    </button>
+  </div>
+
+  <!-- Build a carousel using CSS Grid -->
+
+  <style>
+    body,
+    html,
+    .container {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+
+    }
+
+    .grid-item {
+
+    }
+
+  </style>
+
+  <script>
+    const nextArrow = document.querySelector( '.btn--next' )
+    const prevArrow = document.querySelector( '.btn--prev' )
+    const gridItem = document.querySelectorAll( '.grid-item' )
+    let idx = 0
+
+  </script>
+</body>
+</html>

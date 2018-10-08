@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>Placing Grid Items!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+    <div class="item item19">19</div>
+    <div class="item item20">20</div>
+    <div class="item item21">21</div>
+    <div class="item item22">22</div>
+    <div class="item item23">23</div>
+    <div class="item item24">24</div>
+    <div class="item item25">25</div>
+    <div class="item item26">26</div>
+    <div class="item item27">27</div>
+    <div class="item item28">28</div>
+    <div class="item item29">29</div>
+    <div class="item item30">30</div>
+  </div>
+
+  <!-- 
+
+    ** In the last excercise with spanning we learnt about 
+    ** using the span keyword, but there are several other 
+    ** ways to span items. For instance, if a grid has 6 columns
+    ** and 6 rows, the first grid item will start at column 1
+    ** and end at column 2, same goes for the row. So if I 
+    ** want item3 to span all the way to the end we would 
+    ** write grid-column: 3 (where to span from) / 7 (where we span to).
+    
+    ** Now in this case we know that we have got 6 columns 
+    ** and thereby the grid ends at line 7, but what if we
+    ** all of a sudden wants/needs 8 rows? Then we have to
+    ** change both grid-template-columns and figure out how
+    ** at what line the grid now ends at. 
+    
+    ** Here's a little trick! 
+    ** From left to right and top to bottom the numbers of 
+    ** the lines are positive, 1, 2, 3 etc. But from right
+    ** to left and bottom to top the numbers are negative
+    ** -1, -2, -3 etc. and therefore we can set 
+    ** grid-column: 3 / -1; Then no matter how many columns
+    ** you have, item3 will always stretch to the end.
+
+    ** If you are using FireFox Developer Edition, if you 
+    ** open the console and in the layout tab you check
+    ** the box next to div.container (See image firefoxdd.png)
+    ** and then you will see those lines.
+
+    ** Good Luck! =)
+
+  -->
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 70px);
+    }
+
+    .item3 {
+      
+    }
+  </style>
+</body>
+
+</html>
